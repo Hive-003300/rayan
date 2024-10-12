@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comptabilité Générale et Types d'Entreprises</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        :root {
+            --background: #0f0e17;
+            --text: #fffffe;
+            --primary: #1e90ff; /* لون أزرق */
+            --secondary: #f25f4c;
+            --tertiary: #e53170;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text);
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+        }
+
+        .navbar {
+            background-color: rgba(15, 14, 23, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .navbar a {
+            color: var(--text);
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
+            font-weight: 600;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .navbar a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .navbar a:hover::after {
+            transform: scaleX(1);
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h1, h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            display: inline-block;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            bottom: -10px;
+            left: 25%;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+        }
+
+        h2 {
+            font-size: 1.8em;
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+
+        p, li {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+        }
+
+        ul li::before {
+            content: "•";
+            color: var(--tertiary);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .rtl {
+            direction: rtl;
+            text-align: right;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .navbar a {
+                margin: 5px 0;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+      #btn-download{
+        background-color:#1e90ff ;
+        display:block;
+        text-align:center;
+        margin:auto;
+        padding:10px;
+        border-radius:6px;
+        text-decoration:none;
+        color:black;
+        font-weight:bold;
+      }
+    </style>
+</head>
+<body>
+    
+
+    <div class="content">
+        <h1 class="fade-in">Comptabilité Générale et Types d'Entreprises</h1>
+
+        <section id="comptabilite" class="fade-in">
+            <h2>Comptabilité Générale</h2>
+            <p>
+                La comptabilité générale est intimement liée à l'entreprise et en constitue un reflet.
+                Par conséquent, il est essentiel de discuter des flux économiques entre l'entreprise
+                et son environnement pour comprendre pleinement son concept et son rôle.
+            </p>
+            <p class="rtl"><strong>بالعربية:</strong></p>
+            <p class="rtl">
+                المحاسبة العامة ترتبط ارتباطًا وثيقًا بالشركة وتعكس صورتها. لذلك، من الضروري مناقشة
+                التدفقات الاقتصادية بين الشركة وبيئتها لفهم مفهومها ودورها بشكل كامل.
+            </p>
+        </section>
+
+        <section id="types-entreprise" class="fade-in">
+            <h2>Les Types de l'Entreprise</h2>
+            <p>
+                Il existe plusieurs types d'entreprises, mais les trois principaux qui dominent notre quotidien sont :
+            </p>
+            <ul>
+                <li>1- l'entreprise commerciale</li>
+                <li>2- l'entreprise de service</li>
+                <li>3- l'entreprise industrielle</li>
+            </ul>
+        </section>
+
+        <section id="definition" class="fade-in">
+            <h2>Définition de l'Entreprise</h2>
+            <p>
+                L'entreprise est un système organisé qui produit ou commercialise des biens et services destinés à la vente sur un marché,
+                dans le but de réaliser un bénéfice.
+            </p>
+            <p class="rtl"><strong>بالعربية:</strong></p>
+            <p class="rtl">
+                الشركة هي نظام منظم ينتج أو يبيع السلع والخدمات بهدف تسويقها في السوق وتحقيق الربح.
+            </p>
+          <br>
+          <a id ='btn-download' href="https://cdn.glitch.global/a463004c-303a-4763-beef-b768511ca10f/Comptabilite%CC%81%20Ge%CC%81ne%CC%81rale%20et%20Types%20d'Entreprises.pdf?v=1728738953214">Teleharger pdf</a>
+        </section>
+
+    </div>
+  
+
+  
+</body>
+</html>

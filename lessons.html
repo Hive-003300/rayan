@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Blog - Page d'accueil</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        :root {
+            --background: #0f0e17; /* اللون الخلفي */
+            --text: #fffffe; /* لون النص */
+            --primary: #1e90ff; /* اللون الأزرق الفاتح */
+            --secondary: #f25f4c; /* اللون الثانوي */
+            --tertiary: #e53170; /* اللون الثالث */
+            --card-bg: #1f1e27; /* خلفية البطاقات */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text);
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+        }
+
+        .navbar {
+            background-color: rgba(15, 14, 23, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-brand {
+            color: var(--primary);
+            font-size: 1.5em;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .navbar-links {
+            display: flex;
+        }
+
+        .navbar a {
+            color: var(--text);
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
+            font-weight: 600;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .navbar a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .navbar a:hover::after {
+            transform: scaleX(1);
+        }
+
+        .hero {
+            background-image: url('https://cdn.pixabay.com/photo/2017/09/05/10/19/laptop-2717487_1280.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: var(--text);
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--background);
+            padding: 12px 24px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: var(--secondary);
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--primary);
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit(2, 1fr));
+            gap: 30px;
+        }
+
+        .article-card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+          text-align: center;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .article-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #e0e0e0; /* إضافة لون خلفية افتراضي */
+        }
+
+        .article-content {
+            padding: 20px;
+        }
+
+        .article-title {
+            color: var(--primary);
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+
+        .article-excerpt {
+            font-size: 0.9em;
+            color: var(--text);
+            margin-bottom: 15px;
+        }
+
+        .article-link {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--background);
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .article-link:hover {
+            background-color: var(--secondary);
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+            }
+            
+            .navbar-links {
+                margin-top: 15px;
+            }
+
+            .navbar a {
+                margin: 5px 10px;
+            }
+
+            .hero h1 {
+                font-size: 2.5em;
+            }
+
+            .hero p {
+                font-size: 1em;
+            }
+
+            h2 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        
+        <div class="navbar-links">
+            <a href="#">Accueil</a>
+            <a href="#">lessons</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+
+   
+
+    <div class="content">
+        <h2>Articles Récents</h2>
+
+        <div class="articles-grid">
+            <article class="article-card">
+                
+                <div class="article-content">
+                    <h3 class="article-title">Comptabilité Générale </h3>
+                    <a href="cdr1.html" class="article-link">Lire la suite </a>
+                </div>
+            </article>
+ <!-- add section here-->
+          <article class="article-card">
+                
+                <div class="article-content">
+                    <h3 class="article-title">Comptabilité Générale </h3>
+                    <a href="cdr1.html" class="article-link">Lire la suite </a>
+                </div>
+            </article>
+          
+          <article class="article-card">
+                
+                <div class="article-content">
+                    <h3 class="article-title">Comptabilité Générale </h3>
+                    <a href="cdr1.html" class="article-link">Lire la suite </a>
+                </div>
+            </article>
+          
+          <article class="article-card">
+                
+                <div class="article-content">
+                    <h3 class="article-title">Comptabilité Générale </h3>
+                    <a href="cdr1.html" class="article-link">Lire la suite </a>
+                </div>
+            </article>
+
+           
+
+            
+        </div>
+    </div>
+</body>
+</html>
