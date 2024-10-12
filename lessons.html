@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Blog - Page d'accueil</title>
+    <title>Page d'accueil</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
@@ -27,7 +27,14 @@
             color: var(--text);
             font-family: 'Poppins', sans-serif;
             line-height: 1.6;
+           animation-name: drive;
+           animation-duration: 1800ms;
+
         }
+        @keyframes drive{
+    from{ transform :translateX(-100vw) }
+    to{transform :translateX(0vw)}
+   }
 
         .navbar {
             background-color: rgba(15, 14, 23, 0.8);
@@ -234,9 +241,9 @@
     <nav class="navbar">
         
         <div class="navbar-links">
-            <a href="#">Accueil</a>
-            <a href="#">lessons</a>
-            <a href="#">Contact</a>
+            <a href="index.html">Accueil</a>
+            <a href="lessons.html">lessons</a>
+            <a href="contact.html">Contact</a>
         </div>
     </nav>
 
