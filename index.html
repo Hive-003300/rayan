@@ -27,8 +27,14 @@
             color: var(--text);
             font-family: 'Poppins', sans-serif;
             line-height: 1.6;
-        }
+          animation-name: drive;
+  animation-duration: 1400ms;
 
+        }
+       @keyframes drive{
+    from{ transform :translateX(-100vw) }
+    to{transform :translateX(0vw)}
+   }
         .navbar {
             background-color: rgba(15, 14, 23, 0.8);
             backdrop-filter: blur(10px);
@@ -236,7 +242,7 @@
         <div class="navbar-links">
             <a href="index.html">Accueil</a>
             <a href="lessons.html">lessons</a>
-            <a href="#">Contact</a>
+            <a href="contact.html">Contact</a>
         </div>
     </nav>
 
