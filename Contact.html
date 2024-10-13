@@ -5,57 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulaire de Contact</title>
   <style>
-    .navbar {
-            background-color: rgba(15, 14, 23, 0.8);
-            backdrop-filter: blur(10px);
-            padding: 20px;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: all 0.3s ease;
-        }
-
-        .navbar-brand {
-            color: var(--primary);
-            font-size: 1.5em;
-            font-weight: 600;
-            text-decoration: none;
-        }
-
-        .navbar-links {
-            display: flex;
-        }
-
-        .navbar a {
-            color: var(--text);
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 1.1em;
-            font-weight: 600;
-            transition: color 0.3s ease;
-            position: relative;
-        }
-
-        .navbar a::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 2px;
-            bottom: -5px;
-            left: 0;
-            background-color: var(--primary);
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-
-        .navbar a:hover::after {
-            transform: scaleX(1);
-        }
-
+    
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
@@ -177,14 +127,7 @@
   </style>
 </head>
 <body>
-   <nav class="navbar">
-        
-        <div class="navbar-links">
-            <a href="index.html">Accueil</a>
-            <a href="lessons.html">lessons</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </nav>
+   
 
   <div class="container">
     <h1>Contact</h1>
