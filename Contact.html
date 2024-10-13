@@ -128,7 +128,7 @@
 <body>
   <div class="container">
     <h1>Contact</h1>
-    <form name="contact" id="contact-form" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="Done.html">
       <input type="hidden" name="form-name" value="contact" />
       <p style="display: none;">
         <label>Ne pas remplir si vous êtes humain: <input name="bot-field" /></label>
@@ -148,19 +148,5 @@
       <button type="submit">Envoyer</button>
     </form>
   </div>
-
-  <script>
-    const form = document.getElementById('contact-form');
-
-    form.addEventListener('submit', (event) => {
-      event.preventDefault(); // لمنع الإرسال الفوري للبيانات
-
-      // إرسال البيانات (إذا كنت تستخدم AJAX)
-      // هنا يمكن وضع كود AJAX إذا كان مطلوبًا
-
-      // إعادة توجيه المستخدم إلى صفحة الشكر
-      window.location.href = 'Done.html'; // تأكد من أن المسار صحيح
-    });
-  </script>
 </body>
 </html>
