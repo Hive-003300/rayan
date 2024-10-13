@@ -5,46 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulaire de Contact</title>
   <style>
-    
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(1); }
-    }
-
+    /* General Styles */
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #000000;
+      background-image: linear-gradient(45deg, #000000, #1a1a1a);
       color: #ffffff;
+      margin: 0;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      max-height: 100vh;
-      margin: 0;
-      background-image: linear-gradient(45deg, #000000, #1a1a1a);
+      justify-content: center;
+      height: 98vh;
     }
 
-    .container {
+    /* Navbar Styles */
+    .navbar {
       width: 100%;
-      max-width: 400px;
-      padding: 20px;
+      background-color: #1a1a1a;
+      padding: 10px;
+      display: flex;
+      justify-content: space-around;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
     }
 
-    h1 {
-      text-align: center;
-      margin-bottom: 30px;
-      font-size: 28px;
+    .navbar a {
       color: #007bff;
-      text-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 20px;
+      transition: color 0.3s ease;
+    }
+
+    .navbar a:hover {
+      color: #0056b3;
+    }
+
+    /* Container Styles */
+    .container {
+      margin-top: 60px; /* Space for fixed navbar */
+      width: 98%;
+      max-width: 700px;
+      padding: 20px;
       animation: fadeIn 1s ease-out;
     }
 
+    /* Form Styles */
     form {
       background-color: rgba(28, 28, 28, 0.8);
       padding: 30px;
@@ -53,7 +62,6 @@
       backdrop-filter: blur(10px);
       border: 1px solid rgba(255, 255, 255, 0.1);
       transition: transform 0.3s, box-shadow 0.3s;
-      animation: fadeIn 1s ease-out 0.3s both;
     }
 
     form:hover {
@@ -91,7 +99,7 @@
 
     textarea {
       resize: vertical;
-      min-height: 120px;
+      min-height: 80px;
     }
 
     button {
@@ -111,10 +119,10 @@
 
     button:hover {
       background-color: #0056b3;
-      transform: scale(1.05);
       animation: pulse 1s infinite;
     }
 
+    /* Responsive Styles */
     @media (max-width: 480px) {
       .container {
         padding: 10px;
@@ -123,14 +131,32 @@
       form {
         padding: 20px;
       }
+
+     
+      }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
     }
   </style>
 </head>
 <body>
-   
+  <div class="navbar">
+    <a href="index.html">Accueil</a>
+        <a href="lessons.html">lessons</a>
+    <a href="contact.html">Contact</a>
+  </div>
 
   <div class="container">
-    <h1>Contact</h1>
+    <h1 align="center">Contact</h1>
     <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="Done.html">
       <input type="hidden" name="form-name" value="contact" />
       <p style="display: none;">
