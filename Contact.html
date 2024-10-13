@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulaire de Contact</title>
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    .shake {
+      animation: shake 0.5s ease-in-out infinite;
+    }
+
+    @keyframes shake {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(-5px); }
+      50% { transform: translateX(5px); }
+      75% { transform: translateX(-5px); }
+      100% { transform: translateX(0); }
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #000000;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background-image: linear-gradient(45deg, #000000, #1a1a1a);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 400px;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 28px;
+      color: #007bff;
+      text-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+      animation: fadeIn 1s ease-out;
+    }
+
+    form {
+      background-color: rgba(28, 28, 28, 0.8);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: fadeIn 1s ease-out 0.3s both;
+    }
+
+    form:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 40px rgba(31, 38, 135, 0.5);
+    }
+
+    .form-group {
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #007bff;
+    }
+
+    input, textarea {
+      width: 94%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background-color: rgba(45, 45, 45, 0.8);
+      color: white;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      background-color: rgba(60, 60, 60, 0.8);
+      box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+      animation: pulse 1s infinite;
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 10px;
+      }
+      
+      form {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Contact</h1>
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="contact" />
+      <p style="display: none;">
+        <label>Ne pas remplir si vous êtes humain: <input name="bot-field" /></label>
+      </p>
+      <div class="form-group">
+        <label for="name">Nom:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <button type="submit" id="submit-btn">Envoyer</button>
+    </form>
+  </div>
+
+  <script>
+    const inputs = document.querySelectorAll('input, textarea');
+    const submitButton = document.getElementById('submit-btn');
+
+    inputs.forEach(input => {
+      input.addEventListener('input', () => {
+        if (Array.from(inputs).every(input => input.value.trim() !== '')) {
+          submitButton.classList.add('shake');
+        } else {
+          submitButton.classList.remove('shake');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
