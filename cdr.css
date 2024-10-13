@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --background: #0f0e17;
+    --text: #fffffe;
+    --primary: #1e90ff; /* لون أزرق */
+    --secondary: #f25f4c;
+    --tertiary: #e53170;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
+.navbar {
+    background-color: rgba(15, 14, 23, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar a {
+    color: var(--text);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+h1, h2 {
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    bottom: -10px;
+    left: 25%;
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+}
+
+h2 {
+    font-size: 1.8em;
+    border-bottom: 2px solid var(--secondary);
+    padding-bottom: 10px;
+    margin-top: 40px;
+}
+
+p, li {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+}
+
+ul li::before {
+    content: "•";
+    color: var(--tertiary);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.rtl {
+    direction: rtl;
+    text-align: right;
+}
+
+#btn-download {
+    background-color: #1e90ff;
+    display: block;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .navbar a {
+        margin: 5px 0;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+}
