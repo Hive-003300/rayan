@@ -1,165 +1,24 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulaire de Contact</title>
-  <style>
-    /* General Styles */
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-image: linear-gradient(45deg, #000000, #1a1a1a);
-      color: #ffffff;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 98vh;
-    }
+  <title>Contact</title>
+      <link rel="stylesheet" href="contact.css"> <!-- Link to your CSS file -->
 
-    /* Navbar Styles */
-    .navbar {
-      width: 100%;
-      background-color: #1a1a1a;
-      padding: 10px;
-      display: flex;
-      justify-content: space-around;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 10;
-    }
-
-    .navbar a {
-      color: #007bff;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 10px 20px;
-      transition: color 0.3s ease;
-    }
-
-    .navbar a:hover {
-      color: #0056b3;
-    }
-
-    /* Container Styles */
-    .container {
-      margin-top: 60px; /* Space for fixed navbar */
-      width: 98%;
-      max-width: 700px;
-      padding: 20px;
-      animation: fadeIn 1s ease-out;
-    }
-
-    /* Form Styles */
-    form {
-      background-color: rgba(28, 28, 28, 0.8);
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    form:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 40px rgba(31, 38, 135, 0.5);
-    }
-
-    .form-group {
-      margin-bottom: 25px;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: bold;
-      color: #007bff;
-    }
-
-    input, textarea {
-      width: 94%;
-      padding: 12px;
-      border: none;
-      border-radius: 8px;
-      background-color: rgba(45, 45, 45, 0.8);
-      color: white;
-      font-size: 16px;
-      transition: all 0.3s ease;
-    }
-
-    input:focus, textarea:focus {
-      outline: none;
-      background-color: rgba(60, 60, 60, 0.8);
-      box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
-    }
-
-    textarea {
-      resize: vertical;
-      min-height: 80px;
-    }
-
-    button {
-      width: 100%;
-      padding: 14px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 18px;
-      font-weight: bold;
-      transition: all 0.3s ease;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    button:hover {
-      background-color: #0056b3;
-      animation: pulse 1s infinite;
-    }
-
-    /* Responsive Styles */
-    @media (max-width: 480px) {
-      .container {
-        padding: 10px;
-      }
-      
-      form {
-        padding: 20px;
-      }
-
-     body{
-       justify-content:flex-start;
-     }
-      }
-
-    /* Animations */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(1); }
-    }
-  </style>
+  
 </head>
 <body>
   <div class="navbar">
-    <a href="index.html">Accueil</a>
-        <a href="lessons.html">lessons</a>
-    <a href="contact.html">Contact</a>
+    <a href='/'>Accueil</a>
+        <a href='/lessons'>lessons</a>
+    <a href='/contact'>Contact</a>
   </div>
 
   <div class="container">
     <h1 align="center">Contact</h1>
-    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="Done.html">
+    <form action='Done' method='POST' name='contact'>
       <input type="hidden" name="form-name" value="contact" />
       <p style="display: none;">
         <label>Ne pas remplir si vous êtes humain: <input name="bot-field" /></label>
