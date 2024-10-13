@@ -1,0 +1,195 @@
+ 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --background: #0f0e17;
+    --text: #fffffe;
+    --primary: #1e90ff;
+    --secondary: #f25f4c;
+    --tertiary: #e53170;
+    --card-bg: #1f1e27;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
+/
+.navbar, .content, .articles-grid {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.navbar {
+    background-color: rgba(15, 14, 23, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    color: var(--primary);
+    font-size: 1.5em;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.navbar-links {
+    display: flex;
+}
+
+.navbar a {
+    color: var(--text);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--primary);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.navbar a:hover::after {
+    transform: scaleX(1);
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary);
+    color: var(--background);
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--secondary);
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+        animation: fadeIn 1s ease-out;
+
+}
+
+h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--primary);
+}
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.article-card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+}
+
+.article-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background-color: #e0e0e0;
+}
+
+.article-content {
+    padding: 20px;
+}
+
+.article-title {
+    color: var(--primary);
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.article-excerpt {
+    font-size: 0.9em;
+    color: var(--text);
+    margin-bottom: 15px;
+}
+
+.article-link {
+    display: inline-block;
+    background-color: var(--primary);
+    color: var(--background);
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.article-link:hover {
+    background-color: var(--secondary);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+    
+    .navbar-links {
+        margin-top: 15px;
+    }
+
+    .navbar a {
+        margin: 5px 10px;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+}
+
+ @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
