@@ -16,18 +16,6 @@
       100% { transform: scale(1); }
     }
 
-    .shake {
-      animation: shake 0.5s ease-in-out infinite;
-    }
-
-    @keyframes shake {
-      0% { transform: translateX(0); }
-      25% { transform: translateX(-5px); }
-      50% { transform: translateX(5px); }
-      75% { transform: translateX(-5px); }
-      100% { transform: translateX(0); }
-    }
-
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #000000;
@@ -140,7 +128,7 @@
 <body>
   <div class="container">
     <h1>Contact</h1>
-    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+    <form name="contact" id="contact-form" method="POST" data-netlify="true" netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="contact" />
       <p style="display: none;">
         <label>Ne pas remplir si vous êtes humain: <input name="bot-field" /></label>
@@ -157,22 +145,21 @@
         <label for="message">Message:</label>
         <textarea id="message" name="message" required></textarea>
       </div>
-      <button type="submit" id="submit-btn">Envoyer</button>
+      <button type="submit">Envoyer</button>
     </form>
   </div>
 
   <script>
-    const inputs = document.querySelectorAll('input, textarea');
-    const submitButton = document.getElementById('submit-btn');
+    const form = document.getElementById('contact-form');
 
-    inputs.forEach(input => {
-      input.addEventListener('input', () => {
-        if (Array.from(inputs).every(input => input.value.trim() !== '')) {
-          submitButton.classList.add('shake');
-        } else {
-          submitButton.classList.remove('shake');
-        }
-      });
+    form.addEventListener('submit', (event) => {
+      event.preventDefault(); // لمنع الإرسال الفوري للبيانات
+
+      // إرسال البيانات (إذا كنت تستخدم AJAX)
+      // هنا يمكن وضع كود AJAX إذا كان مطلوبًا
+
+      // إعادة توجيه المستخدم إلى صفحة الشكر
+      window.location.href = 'Done.html'; // تأكد من أن المسار صحيح
     });
   </script>
 </body>
