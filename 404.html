@@ -1,120 +1,70 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>404 - Page Not Found</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>404 - الصفحة غير موجودة</title>
     <style>
-        * {
-            box-sizing: border-box;
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+        
+        body, html {
+            height: 100%;
             margin: 0;
-            padding: 0;
+            font-family: 'Cairo', sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
         }
-        body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-    background-color: #121212;
-    color: #fff;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 96vh;
-    padding: 20px;
-    overflow: hidden;
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            text-align: center;
+            padding: 20px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><rect width="100%" height="100%" fill="none" stroke="white" stroke-width="0.5" stroke-dasharray="2,2"/></svg>');
+            background-repeat: repeat;
         }
         h1 {
-            font-size: 8rem;
-            color: #3498db;
+            font-size: 8rem; /* Increased size */
             margin: 0;
-        }
-        h2 {
-            font-size: 2rem;
-            margin: 10px 0;
-            color: #f1f1f1;
+            color: #00bfff;
         }
         p {
-            font-size: 1.2rem;
-            margin: 20px 0;
-            max-width: 600px;
-            line-height: 1.6;
-            color: #b3b3b3;
+            font-size: 1.4rem; /* Increased size */
+            margin: 0.5rem 0;
+            max-width: 80%;
+            line-height: 1.6; /* Added line height */
         }
         .btn {
-            background-color: #3498db;
-            padding: 15px 30px;
-            border: none;
-            color: #fff;
-            font-size: 1rem;
-            cursor: pointer;
+            display: inline-block;
+            background-color: #00bfff;
+            color: #1a1a1a;
             text-decoration: none;
+            padding: 0.8rem 1.5rem;
             border-radius: 5px;
-            margin-top: 20px;
+            font-size: 1.2rem; /* Slightly increased size */
+            margin-top: 1rem;
+            transition: background-color 0.3s;
         }
-        .divider {
-            width: 100px;
-            height: 3px;
-            background-color: #e74c3c;
-            margin: 20px auto;
+        .btn:hover {
+            background-color: #0099cc;
         }
-        .languages {
-            margin-top: 40px;
-            font-size: 1rem;
-        }
-        .languages p {
-            margin: 0;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 5rem;
-            }
-            h2 {
-                font-size: 1.5rem;
-            }
-            p {
-                font-size: 1rem;
-            }
-            .btn {
-                padding: 12px 24px;
-                font-size: 0.9rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 3.5rem;
-            }
-            h2 {
-                font-size: 1.2rem;
-            }
-            p {
-                font-size: 0.9rem;
-            }
-            .btn {
-                padding: 10px 20px;
-                font-size: 0.8rem;
-            }
+        .language {
+            margin-top: 1rem;
+            font-size: 1rem; /* Slightly increased size */
+            color: #888;
         }
     </style>
 </head>
 <body>
-    <h1>404</h1>
-    <h2>Page Not Found</h2>
-    <p>
-        Désolé, la page que vous cherchez n'existe pas. Veuillez vérifier l'URL ou revenir à la page d'accueil.
-    </p>
-    <div class="divider"></div>
-    <a href="/" class="btn">Go Back Home</a>
-
-    <div class="languages">
-        <p>بالعربية:</p>
-        <p>عذراً، الصفحة التي تبحث عنها غير موجودة. يرجى التحقق من الرابط أو العودة إلى الصفحة الرئيسية.</p>
+    <div class="container">
+        <h1>404</h1>
+        <p>Page Not Found</p>
+        <p>Désolé, la page que vous cherchez n'existe pas. Veuillez vérifier l'URL ou revenir à la page d'accueil.</p>
+        <a href="/" class="btn">Go Back Home</a>
+        <div class="language">بالعربية:</div>
+        <p>عذرًا، الصفحة التي تبحث عنها غير موجودة. يرجى التحقق من الرابط أو العودة إلى الصفحة الرئيسية.</p>
     </div>
 </body>
 </html>
