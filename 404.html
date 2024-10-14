@@ -17,7 +17,6 @@
         .container {
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
             height: 100%;
             text-align: center;
@@ -54,6 +53,12 @@
             margin-top: 1rem;
             font-size: 1rem; /* Slightly increased size */
             color: #888;
+        }
+        @media(min-width: 784px){
+            container{
+                            justify-content: center;
+
+            }
         }
     </style>
 </head>
