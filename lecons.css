@@ -111,7 +111,7 @@ h2 {
 
 .articles-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(3 , 1fr);
     gap: 30px;
 }
 
@@ -181,6 +181,12 @@ h2 {
     h2 {
         font-size: 2em;
     }
+  .articles-grid {
+    display: grid;
+    grid-template-columns: repeat(1 , 1fr);
+    gap: 30px;
+}
+
 }
 
  @keyframes fadeIn {
