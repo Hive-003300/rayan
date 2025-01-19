@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Information</title>
+    <link rel="stylesheet" href="cdr.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="foter.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <div class="content">
+        <h1>Personal Information</h1>
+
+        <section id="my-info">
+            <h2>My Information</h2>
+            <p>
+                Hello! My first name is Abdeslam, my family name is Chaittout. I'm 46 years old, I'm Moroccan from Larache. I speak Arabic, French, and English. I have 3 brothers and 3 sisters.
+            </p>
+        </section>
+
+        <section id="classmate-info">
+            <h2>Classmate's Information</h2>
+            <p>
+                This is my classmate. He is <strong>___</strong> years old. He is <strong>...........</strong> from <strong>.......</strong>. He speaks Arabic, <strong>....</strong> and <strong>.......</strong>. He has <strong>....</strong> brothers and <strong>........</strong> sisters.
+            </p>
+        </section>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>009900 online</h3>
+                <p>Partageons des connaissances en comptabilité et gestion d'entreprise</p>
+            </div>
+            <div class="footer-section">
+                <h3>Liens rapides</h3>
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">Leçons</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contactez-nous</h3>
+                <p>Email: contact@009900online.com</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 009900 online. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+
