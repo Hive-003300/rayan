@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>009900 online - Cours de comptabilité et gestion d'entreprise</title>
+     <link rel="stylesheet" href="lecons2.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="foter.css"> <!-- Link to your CSS file -->
+     <!-- Meta description -->
+    <meta name="description" content="009900 online lecon Anglais.">
+    
+    <!-- Meta keywords -->
+    <meta name="keywords" content="comptabilité, gestion d'entreprise, cours en ligne, formation professionnelle , 009900 , 00 online , rayan online , 009900 online , online 009900 , 00">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.009900.online">
+    
+    <!-- Open Graph meta tags for social media -->
+    <meta property="og:title" content="009900 online - lecons de anglais">
+    <meta property="og:description" content="Améliorez vos compétences en comptabilité et gestion avec nos cours en ligne.">
+    <meta property="og:url" content="https://www.009900.online">
+    <meta property="og:type" content="website">
+    <!-- Twitter Card meta tags -->
+    
+    <meta name="twitter:title" content="009900 online - Cours de comptabilité et gestion d'entreprise">
+    <meta name="twitter:description" content="Améliorez vos compétences en comptabilité et gestion avec nos cours en ligne.">
+    
+    
+    
+
+  
+</head><body>
+    <nav class="navbar">
+        
+        <div class="navbar-links">
+            <a href="index.html">Accueil</a>
+            <a href="lecons.html">lessons</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+   
+ <!-- add section here-->
+    <div class="content">
+        <h2>Articles Récents</h2>
+      <!--   ........................... -->
+
+        <div class="articles-grid">
+            <article class="article-card">
+                
+                <div class="article-content">
+                    <h3 class="article-title">Première séance </h3>
+                                      <a href="comptabilite-generale-1.html" class="article-link">Lire la suite</a>
+
+                </div>
+            </article>
+ <!-- add section here-->
+         
+          <article class="article-card">
+                
+                <div class="article-content">
+                    <h3 class="article-title">Deuxième séance </h3>
+                                      <a href="comptabilite-generale-1.html" class="article-link">Lire la suite</a>
+
+                </div>
+            </article>
+          
+          
+          <article class="article-card">
+                
+                <div class="article-content">
+                    <h3 class="article-title">Troisième séance </h3>
+                                      <a href="comptabilite-generale-1.html" class="article-link">Lire la suite</a>
+
+                </div>
+            </article>
+          
+          
+          <article class="article-card">
+                
+                <div class="article-content">
+                    <h3 class="article-title">Quatrième séance </h3>
+                                      <a href="comptabilite-generale-1.html" class="article-link">Lire la suite</a>
+
+                </div>
+            </article>
+          
+           
+          
+            
+        </div>
+    </div>
+</body>
+</html>
