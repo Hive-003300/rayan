@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcul des Indemnités et Salaire Brut Global</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #2C3E50;
+        }
+        h2 {
+            color: #34495E;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 5px;
+            border-radius: 4px;
+        }
+        .calcul {
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #BDC3C7;
+            background-color: #ECF0F1;
+        }
+        .step {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Calcul des Indemnités et Salaire Brut Global</h1>
+
+    <div class="calcul">
+        <h2>1. Indemnité de Licenciement</h2>
+        <p>L'indemnité de licenciement se calcule selon la durée de l'ancienneté :</p>
+        <ul>
+            <li>Pour les 5 premières années : 96 h/an</li>
+            <li>De 6 à 10 ans : 144 h/an</li>
+            <li>De 11 à 15 ans : 192 h/an</li>
+            <li>A partir de 16 ans : 240 h/an</li>
+        </ul>
+
+        <h3>Exemple :</h3>
+        <p>Calculer l'indemnité de licenciement d'un salarié ayant travaillé 18 ans dans une société avec un taux horaire de 28 DH/heure :</p>
+        <p>Calcul de l'indemnité :</p>
+        <code>Indemnité = (5 × 96 + 5 × 144 + 5 × 192 + 3 × 240) × 28 DH</code>
+        <p><strong>Indemnité pour 18 ans = 80640 DH</strong></p>
+        <p>Si le salarié a travaillé 18 ans et 7 mois, l'indemnité devient :</p>
+        <code>Indemnité = 80640 DH + (7 mois / 12) × 240 h × 28 DH = 84560 DH</code>
+    </div>
+
+    <div class="calcul">
+        <h2>2. Calcul du Salaire Brut Global de M. Rida</h2>
+        <p><strong>Monsieur Rida</strong> travaille dans une entreprise depuis mai 1989, et les éléments de son salaire sont les suivants :</p>
+        <ul>
+            <li>Taux horaire (TH) = 23 DH/h</li>
+            <li>Heures supplémentaires :</li>
+            <ul>
+                <li>Mardi de 17h à 23h</li>
+                <li>Dimanche de 20h à 3h</li>
+                <li>Dimanche de 10h à 14h</li>
+            </ul>
+            <li>Prime de fonction : 750 DH</li>
+            <li>Indemnité de déplacement justifiée : 1200 DH</li>
+        </ul>
+
+        <h3>Calcul des Heures Supplémentaires :</h3>
+        <ul>
+            <li><strong>HS de mardi (17h-21h, jour ouvrable)</strong> :</li>
+            <code>HS de mardi = 4 h × 23 DH/h × 1,25 (majoration de 25%) = 115 DH</code>
+
+            <li><strong>HS de mardi  (21h-23h, jour ouvrable , nuit)</strong> :</li>
+            <code>HS de dimanche = 2 h × 23 DH/h × 1,5 (majoration de 50%) = 69 DH</code>
+
+            <li><strong>HS de dimanche (10h-14h, jour férié , nuit)</strong> :</li>
+            <code>HS de dimanche = 5 h × 23 DH/h × 2 (majoration de 100%) = 230 DH</code>
+
+            <li><strong>HS de dimanche (10h-14h, jour férié, jour)</strong> :</li>
+            <code>HS de dimanche = 4 h × 23 DH/h × 1,5 (majoration de 50%) = 138 DH</code>
+        </ul>
+
+        <h3>Total des Heures Supplémentaires :</h3>
+        <code>Total HS = 115 DH + 69 DH + 230 DH + 138 DH = 552 DH</code>
+
+        <h3>Calcul du Salaire de Base (SB) :</h3>
+        <code>SB = 191 h × 23 DH/h = 4393 DH</code>
+
+        <h3>Calcul de la Prime d'Ancienneté (PA) :</h3>
+        <p>Prime d'ancienneté calculée avec un taux de 25% :</p>
+        <code>PA = (SB + HS) × 25%</code>
+        <code>PA = (4393 DH + 552 DH) × 25% = 1230 DH</code>
+
+        <h3>Calcul du Salaire Brut Global (SBG) :</h3>
+        <code>SBG = SB + HS + PA + Prime de fonction + Indemnité de déplacement</code>
+        <code>SBG = 4393 DH + 552 DH + 1230 DH + 750 DH + 1200 DH = 8313,2 DH</code>
+    </div>
+
+</body>
+</html>
+
