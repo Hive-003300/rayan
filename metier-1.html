@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traitement du Salaire Net à Payer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #2C3E50;
+        }
+        h2 {
+            color: #34495E;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 5px;
+            border-radius: 4px;
+        }
+        .calcul {
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #BDC3C7;
+            background-color: #ECF0F1;
+        }
+        .step {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Traitement du Salaire Net à Payer</h1>
+
+    <div class="calcul">
+        <h2>1. Calcul du <strong>Salaire de Base</strong> (SB)</h2>
+        <p>Le salaire de base est calculé comme suit :</p>
+        <code>SB = Nombre d'heures normales de travail (NHNT) × Taux horaire (TH)</code>
+
+        <h3>Exemple 1 :</h3>
+        <p><strong>Monsieur Ahmed</strong> travaille dans une entreprise avec un taux horaire de 25 DH/heure.</p>
+        <p>Calcul du salaire de base :</p>
+        <code>SB = 191 h/mois × 25 DH/h = 4775 DH</code>
+
+        <h3>Exemple 2 :</h3>
+        <p><strong>Monsieur Radi</strong> a un salaire de base de 3500 DH. Nous devons maintenant calculer son taux horaire.</p>
+        <p>Calcul du taux horaire :</p>
+        <code>TH = 3500 DH / 91 h = 18,32 DH/h</code>
+    </div>
+
+    <div class="calcul">
+        <h2>2. Calcul des <strong>Heures Supplémentaires</strong> (HS)</h2>
+        <h3>2.1) Jours Ouvrables : Lundi - Samedi</h3>
+        <p>Les majorations pour les heures supplémentaires sont les suivantes :</p>
+        <ul>
+            <li><strong>Jour</strong> : 25% de majoration</li>
+            <li><strong>Nuit</strong> : 50% de majoration</li>
+        </ul>
+
+        <h3>2.2) Jours Fériés (Dimanche, etc.)</h3>
+        <p>Les majorations pour les heures supplémentaires les jours fériés sont les suivantes :</p>
+        <ul>
+            <li><strong>Jour</strong> : 50% de majoration</li>
+            <li><strong>Nuit</strong> : 100% de majoration</li>
+        </ul>
+
+        <h3>Application des Heures Supplémentaires :</h3>
+        <p>Exemple : Monsieur Ahmed a travaillé 10 heures supplémentaires :</p>
+        <ul>
+            <li>Le lundi de 18h à 20h (jour ouvrable)</li>
+            <li>Le dimanche de 14h à 15h (jour férié)</li>
+            <li>Un jour férié de 20h à 23h (nuit)</li>
+        </ul>
+
+        <h4>Calcul de la rémunération des heures supplémentaires :</h4>
+
+        <p><strong>1. Lundi (jour ouvrable, 18h-20h)</strong> :</p>
+        <p>Calcul des heures supplémentaires pour lundi :</p>
+        <code>2 h × 25 DH/h × 1,25 (majoration de 25%) = 62,5 DH</code>
+
+        <p><strong>2. Dimanche (jour férié, 14h-15h)</strong> :</p>
+        <p>Calcul des heures supplémentaires pour dimanche :</p>
+        <code>1 h × 25 DH/h × 1,5 (majoration de 50%) = 37,5 DH</code>
+
+        <p><strong>3. Jour férié (20h-23h, nuit)</strong> :</p>
+        <p>Calcul des heures supplémentaires pour la nuit :</p>
+        <code>3 h × 25 DH/h × 2 (majoration de 100%) = 150 DH</code>
+
+        <h4>Total des heures supplémentaires :</h4>
+        <code>Total HS = 62,5 DH + 37,5 DH + 150 DH = 250 DH</code>
+    </div>
+
+</body>
+</html>
+
+
+
+
+
