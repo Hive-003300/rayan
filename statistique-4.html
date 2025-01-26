@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau Statistique</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #333;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .formula {
+            background: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: left;
+            overflow-x: auto;
+        }
+        math {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Exercice 4 - Tableau Statistique</h1>
+    <table>
+        <tr>
+            <th>Classe</th>
+            <th>ni</th>
+            <th>ECC</th>
+            <th>ECD</th>
+            <th>Fréq (%)</th>
+            <th>ni</th>
+            <th>ni × xi</th>
+        </tr>
+        <tr>
+            <td>[1250 - 1500[</td>
+            <td>10</td>
+            <td>10</td>
+            <td>240</td>
+            <td>4.1%</td>
+            <td>1375</td>
+            <td>13,750</td>
+        </tr>
+        <tr>
+            <td>[1500 - 1750[</td>
+            <td>30</td>
+            <td>40</td>
+            <td>230</td>
+            <td>12.5%</td>
+            <td>1625</td>
+            <td>48,750</td>
+        </tr>
+        <tr>
+            <td>[1750 - 2000[</td>
+            <td>60</td>
+            <td>100</td>
+            <td>200</td>
+            <td>25%</td>
+            <td>1875</td>
+            <td>112,500</td>
+        </tr>
+        <tr>
+            <td>[2000 - 2500[</td>
+            <td>80</td>
+            <td>180</td>
+            <td>140</td>
+            <td>33.33%</td>
+            <td>2250</td>
+            <td>180,000</td>
+        </tr>
+        <tr>
+            <td>[2500 - 2750[</td>
+            <td>35</td>
+            <td>215</td>
+            <td>60</td>
+            <td>14.58%</td>
+            <td>2625</td>
+            <td>91,875</td>
+        </tr>
+        <tr>
+            <td>[2750 - 3000[</td>
+            <td>25</td>
+            <td>240</td>
+            <td>25</td>
+            <td>10.41%</td>
+            <td>2875</td>
+            <td>71,875</td>
+        </tr>
+        <tr>
+            <th>Total</th>
+            <th>240</th>
+            <th colspan="4"></th>
+            <th>518,750</th>
+        </tr>
+    </table>
+
+    <h1>📊 Calcul du Mode, Médiane et Moyenne</h1>
+
+    <h2>📌 1. Calcul du Mode</h2>
+    <p>Le mode est la classe qui a la plus grande fréquence (<b>ni</b>).</p>
+    <p>La classe modale est <b>[2000 - 2500[</b> avec <b>ni = 80</b>.</p>
+    <p>Formule :</p>
+    <div class="formula">
+        <math>
+            <mi>Mode</mi> =
+            <mi>L</mi> +
+            <mfrac>
+                <mrow>
+                    <mi>ni</mi> - <msub><mi>ni</mi><mi>précédent</mi></msub>
+                </mrow>
+                <mrow>
+                    2<mi>ni</mi> - <msub><mi>ni</mi><mi>précédent</mi></msub> - <msub><mi>ni</mi><mi>suivant</mi></msub>
+                </mrow>
+            </mfrac>
+            × <mi>h</mi>
+        </math>
+    </div>
+    <p>Résultat : <b>Mode ≈ 2153.8</b></p>
+
+    <h2>📌 2. Calcul de la Médiane</h2>
+    <p>On cherche la classe qui contient <b>N/2</b>. Avec <b>N = 240</b>, on a <b>N/2 = 120</b>.</p>
+    <p>La classe médiane est <b>[1750 - 2000[</b>.</p>
+    <p>Formule :</p>
+    <div class="formula">
+        <math>
+            <mi>Médiane</mi> =
+            <mi>L</mi> +
+            <mfrac>
+                <mrow>
+                    <mfrac>
+                        <mi>N</mi><mn>2</mn>
+                    </mfrac> - <msub><mi>E</mi><mi>précédent</mi></msub>
+                </mrow>
+                <mi>ni</mi>
+            </mfrac>
+            × <mi>h</mi>
+        </math>
+    </div>
+    <p>Résultat : <b>Médiane ≈ 1812.5</b></p>
+
+    <h2>📌 3. Calcul de la Moyenne</h2>
+    <p>La moyenne est calculée par :</p>
+    <div class="formula">
+        <math>
+            <mi>Moyenne</mi> =
+            <mfrac>
+                <mrow>
+                    <mo>∑</mo>(<mi>ni</mi> × <mi>xi</mi>)
+                </mrow>
+                <mi>N</mi>
+            </mfrac>
+        </math>
+    </div>
+    <p>Avec :</p>
+    <div class="formula">
+        <math>
+            <mfrac>
+                <mrow>
+                    <mn>518750</mn>
+                </mrow>
+                <mn>240</mn>
+            </mfrac>
+            ≈ <mn>2161.46</mn>
+        </math>
+    </div>
+
+    <h2>🔹 Résumé :</h2>
+    <p><b>Mode :</b> 2153.8</p>
+    <p><b>Médiane :</b> 1812.5</p>
+    <p><b>Moyenne :</b> 2161.46</p>
+</div>
+
+</body>
+</html>
