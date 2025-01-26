@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcul de la Médiane</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        h2 {
+            color: #555;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        .example {
+            background: #e0e0e0;
+            padding: 10px;
+            border-left: 5px solid #333;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Comment calculer la Médiane ?</h1>
+
+    <p>La médiane est une mesure de tendance centrale qui divise une série de données ordonnées en deux parties égales. Elle représente la valeur qui sépare la moitié inférieure de la moitié supérieure des données.</p>
+
+    <h2>Étapes pour calculer la médiane :</h2>
+    <ol>
+        <li><strong>Trier les données :</strong> Les valeurs doivent être classées dans l'ordre croissant.</li>
+        <li><strong>Déterminer la position de la médiane :</strong>
+            <ul>
+                <li>Si le nombre de valeurs <em>n</em> est impair, la médiane est la valeur située au rang \frac{n+1}{2}.</li>
+                <li>Si le nombre de valeurs <em>n</em> est pair, la médiane est la moyenne des deux valeurs centrales, situées aux rangs \frac{n}{2} et \frac{n}{2} + 1.</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h2>Exemple :</h2>
+    <div class="example">
+        <p>Supposons que nous ayons la série suivante : <strong>3, 7, 8, 12, 15</strong></p>
+        <p>Le nombre d'éléments est impair (<em>n = 5</em>), donc la médiane est la valeur en position \frac{5+1}{2} = 3, soit <strong>8</strong>.</p>
+        
+        <p>Si nous avons la série <strong>3, 7, 8, 12, 15, 18</strong></p>
+        <p>Le nombre d'éléments est pair (<em>n = 6</em>), donc la médiane est la moyenne des valeurs en positions 6/2 = 3 et 6/2 + 1 = 4 :</p>
+        <p>\frac{8 + 12}{2} = 10</p>
+        <p>Ainsi, la médiane est <strong>10</strong>.</p>
+    </div>
+
+    <p>La médiane est particulièrement utile lorsqu'il y a des valeurs extrêmes (valeurs aberrantes) dans un ensemble de données, car elle est moins sensible aux écarts que la moyenne arithmétique.</p>
+</div>
+
+</body>
+</html>
