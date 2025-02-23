@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .intro {
+            margin-bottom: 20px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        
+        th {
+            background-color: #f5f5f5;
+        }
+        
+        .total-row {
+            font-weight: bold;
+        }
+        
+        .questions {
+            list-style-type: decimal;
+            padding-left: 20px;
+        }
+        
+        .questions li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="intro">
+        On a interrogé 200 individus sur la distance en kilomètres parcourue chaque jour pour se rendre à leurs lieux de travail. Les réponses sont résumées dans le tableau suivant:
+    </div>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Distance en Km</th>
+                <th>Effectif ni</th>
+                <th>niCC 0,5 pt</th>
+                <th>niCC % 0,5 pt</th>
+                <th>xi 0,5 pt</th>
+                <th>ni×xi 0,5 pt</th>
+                <th>ni×xi/CC 0,5 pt</th>
+                <th>ni×xi/CC% 0,5 pt</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>[0 ; 5[</td>
+                <td>30</td>
+                <td>30</td>
+                <td>15%</td>
+                <td>2,5</td>
+                <td>75</td>
+                <td>75</td>
+                <td>2,54</td>
+            </tr>
+            <tr>
+                <td>[5 ; 10[</td>
+                <td>40</td>
+                <td>70</td>
+                <td>35%</td>
+                <td>7,5</td>
+                <td>300</td>
+                <td>375</td>
+                <td>12,71</td>
+            </tr>
+            <tr>
+                <td>[10 ; 15[</td>
+                <td>40</td>
+                <td>110</td>
+                <td>55%</td>
+                <td>12,5</td>
+                <td>500</td>
+                <td>875</td>
+                <td>29,63</td>
+            </tr>
+            <tr>
+                <td>[15 ; 20[</td>
+                <td>25</td>
+                <td>135</td>
+                <td>67,5%</td>
+                <td>17,5</td>
+                <td>437,5</td>
+                <td>1312,5</td>
+                <td>44,45</td>
+            </tr>
+            <tr>
+                <td>[20 ; 25[</td>
+                <td>30</td>
+                <td>165</td>
+                <td>82,5%</td>
+                <td>22,5</td>
+                <td>675</td>
+                <td>1987,5</td>
+                <td>67,31</td>
+            </tr>
+            <tr>
+                <td>[25 ; 30[</td>
+                <td>35</td>
+                <td>200</td>
+                <td>100%</td>
+                <td>27,5</td>
+                <td>962,5</td>
+                <td>2950</td>
+                <td>100</td>
+            </tr>
+            <tr class="total-row">
+                <td>Total</td>
+                <td>200</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>2950</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ol class="questions">
+        <li>Quelle est la variable statistique étudiée et sa nature ?</li>
+        <li>Combien de personnes parcourent des distances entre 5 et 15 km ?</li>
+        <li>Combien de personnes parcourent des distances au plus égales à 10 km ?</li>
+        <li>Calculer l'étendue de cette série statistique ;</li>
+        <li>Calculer la distance moyenne parcourue ?</li>
+        <li>Calculer la médiane</li>
+        <li>Tracer la courbe de concentration (courbe de Lorentz)</li>
+        <li>Calculer l'indice de GINI</li>
+    </ol>
+</body>
+</html>
