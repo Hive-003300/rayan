@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technique de calcule de l'IR sur salaire</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        h1 {
+            color: #c00;
+            text-align: center;
+            border-bottom: 2px solid #c00;
+            padding-bottom: 10px;
+            text-decoration: underline;
+        }
+        
+        .formule {
+            margin: 15px 0;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        
+        .variable {
+            color: #c00;
+            font-weight: bold;
+        }
+        
+        .equation {
+            color: #000;
+        }
+        
+        .note {
+            margin-top: 40px;
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-left: 4px solid #c00;
+            font-style: italic;
+        }
+        
+        .container {
+            background-color: white;
+            padding: 25px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Technique de calcule de l'IR sur salaire</h1>
+        
+        <div class="formule">
+            <span class="variable">Salaire de base</span> <span class="equation">=Nombre d'heures x taux horaire</span>
+        </div>
+        
+        <div class="formule">
+            <span class="variable">Hs</span> <span class="equation">= nombre d'heures supplémentaires x taux horaire majoré</span>
+        </div>
+        
+        <div class="formule">
+            <span class="variable">Prime d'ancienneté</span> <span class="equation">=(SB + HS) x Taux d'ancienneté</span>
+        </div>
+        
+        <div class="formule">
+            <span class="variable">SBG</span><span class="equation">=Salaire de base + Heures supplémentaires + Primes +Indemnités +Avantage en argent et en nature</span>
+        </div>
+        
+        <div class="formule">
+            <span class="variable">SBI</span> <span class="equation">=SBG − Exonérations</span>
+        </div>
+        
+        <div class="formule">
+            <span class="variable">SNI</span> <span class="equation">=SBI − (CNSS+AMO+CIMR + Frais professionnel +Intérêt pour acquisition d'un logement)</span>
+        </div>
+        
+        <div class="formule">
+            <span class="variable">IR Brut</span> <span class="equation">=SNI x Taux - Somme à déduire</span>
+        </div>
+        
+        <div class="formule">
+            <span class="variable">IR Net</span> <span class="equation">= IR Brut - Déductions pour charge de famille</span>
+        </div>
+        
+        <div class="note">
+            <span class="variable">Nb :</span> les déductions pour charge de famille sont fixées à 30 DH par personne et par mois avec plafond de 180 DH
+        </div>
+        
+        <div class="exonerations">
+            <h2>Qu'est-ce que les Exonérations?</h2>
+            <p>Les <span class="variable">Exonérations</span> sont des montants exclus du calcul de l'impôt sur le revenu selon la législation fiscale marocaine. Elles comprennent:</p>
+            
+            <ul class="liste-exonerations">
+                <li>Les allocations familiales légales</li>
+                <li>Les bourses d'études</li>
+                <li>Les indemnités destinées à couvrir les frais de maladie ou d'accident</li>
+                <li>Les indemnités de licenciement dans la limite du plafond légal</li>
+                <li>Les indemnités de décès</li>
+                <li>Certaines primes et gratifications exceptionnelles exonérées par un texte légal spécifique</li>
+            </ul>
+            
+            <p>Ces exonérations visent à alléger la charge fiscale des employés, notamment dans certaines situations sociales ou de santé, ou selon la politique de l'État pour encourager certains secteurs.</p>
+        </div>
+    </div>
+</body>
+</html>
